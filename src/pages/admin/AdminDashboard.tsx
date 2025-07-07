@@ -11,7 +11,7 @@ export default function AdminDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total de Profissionais</CardTitle>
+            <CardTitle className="text-sm font-medium">Profissionais Ativos</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-foreground">156</div>
@@ -21,62 +21,53 @@ export default function AdminDashboard() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Categorias Ativas</CardTitle>
+            <CardTitle className="text-sm font-medium">Representantes</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">8</div>
-            <p className="text-xs text-muted-foreground">+2 novas categorias</p>
+            <div className="text-2xl font-bold text-foreground">23</div>
+            <p className="text-xs text-success">+3 novos representantes</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Serviços Cadastrados</CardTitle>
+            <CardTitle className="text-sm font-medium">Códigos Gerados (24h)</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">324</div>
-            <p className="text-xs text-success">+8% este mês</p>
+            <div className="text-2xl font-bold text-foreground">18</div>
+            <p className="text-xs text-warning">7 ainda ativos</p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Serviços Solicitados</CardTitle>
+            <CardTitle className="text-sm font-medium">Clicks de Contato</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">2,847</div>
+            <div className="text-2xl font-bold text-foreground">1,247</div>
             <p className="text-xs text-success">+23% este mês</p>
           </CardContent>
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Atividade Recente</CardTitle>
+            <CardTitle>Pendências</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium">Novo profissional cadastrado</p>
-                  <p className="text-sm text-muted-foreground">João Silva - Eletricista</p>
-                </div>
-                <span className="text-sm text-muted-foreground">2 min atrás</span>
+                <span className="text-sm">Avaliações para aprovar</span>
+                <span className="text-lg font-bold text-warning">5</span>
               </div>
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium">Categoria atualizada</p>
-                  <p className="text-sm text-muted-foreground">Encanamento - Novos serviços adicionados</p>
-                </div>
-                <span className="text-sm text-muted-foreground">15 min atrás</span>
+                <span className="text-sm">Solicitações de cadastro</span>
+                <span className="text-lg font-bold text-info">3</span>
               </div>
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-medium">Serviço aprovado</p>
-                  <p className="text-sm text-muted-foreground">Instalação de torneiras - Maria Santos</p>
-                </div>
-                <span className="text-sm text-muted-foreground">1 hora atrás</span>
+                <span className="text-sm">Códigos expirando hoje</span>
+                <span className="text-lg font-bold text-destructive">2</span>
               </div>
             </div>
           </CardContent>
@@ -84,41 +75,101 @@ export default function AdminDashboard() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Estatísticas Rápidas</CardTitle>
+            <CardTitle>Top Representantes</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Ana Costa</span>
+                <span className="text-sm font-medium">45 indicações</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Roberto Silva</span>
+                <span className="text-sm font-medium">32 indicações</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Marina Santos</span>
+                <span className="text-sm font-medium">18 indicações</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Categorias Populares</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
               <div>
-                <div className="flex justify-between text-sm">
-                  <span>Profissionais Ativos</span>
-                  <span>87%</span>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>Limpeza</span>
+                  <span>45 profissionais</span>
                 </div>
-                <div className="w-full bg-secondary rounded-full h-2 mt-1">
-                  <div className="bg-success h-2 rounded-full" style={{ width: '87%' }}></div>
+                <div className="w-full bg-secondary rounded-full h-2">
+                  <div className="bg-success h-2 rounded-full" style={{ width: '90%' }}></div>
                 </div>
               </div>
               <div>
-                <div className="flex justify-between text-sm">
-                  <span>Categorias Populares</span>
-                  <span>65%</span>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>Elétrica</span>
+                  <span>32 profissionais</span>
                 </div>
-                <div className="w-full bg-secondary rounded-full h-2 mt-1">
+                <div className="w-full bg-secondary rounded-full h-2">
                   <div className="bg-primary h-2 rounded-full" style={{ width: '65%' }}></div>
                 </div>
               </div>
               <div>
-                <div className="flex justify-between text-sm">
-                  <span>Satisfação dos Clientes</span>
-                  <span>94%</span>
+                <div className="flex justify-between text-sm mb-1">
+                  <span>Encanamento</span>
+                  <span>28 profissionais</span>
                 </div>
-                <div className="w-full bg-secondary rounded-full h-2 mt-1">
-                  <div className="bg-success h-2 rounded-full" style={{ width: '94%' }}></div>
+                <div className="w-full bg-secondary rounded-full h-2">
+                  <div className="bg-info h-2 rounded-full" style={{ width: '55%' }}></div>
                 </div>
               </div>
             </div>
           </CardContent>
         </Card>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Atividade Recente</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Código de indicação usado</p>
+                <p className="text-sm text-muted-foreground">REF-2024-001 - Pedro Almeida (Eletricista)</p>
+              </div>
+              <span className="text-sm text-muted-foreground">5 min atrás</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Avaliação aprovada</p>
+                <p className="text-sm text-muted-foreground">João Santos - 4.8 estrelas</p>
+              </div>
+              <span className="text-sm text-muted-foreground">15 min atrás</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Novo representante</p>
+                <p className="text-sm text-muted-foreground">Marina Santos - Belo Horizonte</p>
+              </div>
+              <span className="text-sm text-muted-foreground">1 hora atrás</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-medium">Solicitação de cadastro</p>
+                <p className="text-sm text-muted-foreground">Lucia Santos - Limpeza (pendente)</p>
+              </div>
+              <span className="text-sm text-muted-foreground">2 horas atrás</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }

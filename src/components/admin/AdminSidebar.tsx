@@ -15,20 +15,44 @@ import {
   Settings,
   Plus,
   Check,
-  X
+  Users,
+  QrCode,
+  Star,
+  BarChart3,
+  UserCheck
 } from "lucide-react";
 
 const adminItems = [
   { 
     title: "Dashboard", 
     url: "/admin", 
-    icon: Settings,
+    icon: BarChart3,
     exact: true
   },
   { 
     title: "Profissionais", 
     url: "/admin/professionals", 
     icon: User 
+  },
+  { 
+    title: "Representantes", 
+    url: "/admin/representatives", 
+    icon: Users 
+  },
+  { 
+    title: "Códigos de Indicação", 
+    url: "/admin/referral-codes", 
+    icon: QrCode 
+  },
+  { 
+    title: "Avaliações", 
+    url: "/admin/reviews", 
+    icon: Star 
+  },
+  { 
+    title: "Aprovações", 
+    url: "/admin/approvals", 
+    icon: UserCheck 
   },
   { 
     title: "Categorias", 
@@ -80,7 +104,7 @@ export function AdminSidebar() {
         </div>
 
         <SidebarGroup>
-          <SidebarGroupLabel>Gerenciamento</SidebarGroupLabel>
+          <SidebarGroupLabel>Painel de Controle</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {adminItems.map((item) => (
